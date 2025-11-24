@@ -1,0 +1,56 @@
+# --- Python Virtual Environment ---
+venv/
+env/
+.venv/
+ENV/
+
+# --- Python cache files ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Distribution / packaging ---
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# --- Logs ---
+*.log
+
+# --- Unit test / coverage ---
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# --- Django / Flask / FastAPI specifics (safe to include even if unused) ---
+*.sqlite3
+db.sqlite3
+instance/
+.env
+*.pid
+
+# --- VS Code ---
+.vscode/
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- OS files ---
+.DS_Store
+Thumbs.db

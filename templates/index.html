@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Access Map</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Urban Access Map</h1>
+        <p>Mapping accessible routes and venues</p>
+    </div>
+    
+    <div id="map"></div>
+    
+    <div class="controls">
+        <button id="locate">Locate Me</button>
+        <button id="report">Report Issue</button>
+    </div>
+
+    <div id="report-modal" class="report-modal">
+    <div class="modal-content">
+        <h3>Report Accessibility Issue</h3>
+        <form id="report-form">
+            <input type="hidden" id="report-lat" name="lat">
+            <input type="hidden" id="report-lon" name="lon">
+            
+            <div class="form-group">
+                <label for="issue_type">Issue Type:</label>
+                <select id="issue_type" name="issue_type" required>
+                    <option value="">Select an issue</option>
+                    <option value="stairs">Stairs / No Ramp</option>
+                    <option value="narrow">Narrow Pathway</option>
+                    <option value="surface">Uneven Surface</option>
+                    <option value="door">Difficult Door</option>
+                    <option value="bathroom">Inaccessible Bathroom</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="description">Additional Details:</label>
+                <textarea id="description" name="description" placeholder="Describe the accessibility issue..."></textarea>
+            </div>
+            
+            <div class="form-actions">
+                <button type="button" id="cancel-report">Cancel</button>
+                <button type="submit">Submit Report</button>
+            </div>
+        </form>
+    </div>
+    </div>
+    
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="{{ url_for('static', filename='js/map.js') }}"></script>
+</body>
+</html>
