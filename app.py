@@ -5,7 +5,7 @@ import os
 from datetime import datetime
 
 app = Flask(__name__)
-app.config['DATABASE'] = 'accessibility.db'
+app.config['DATABASE'] = os.path.join('instance', 'accessibility.db')
 
 def get_db():
     db = sqlite3.connect(app.config['DATABASE'])
