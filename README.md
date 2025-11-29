@@ -107,6 +107,7 @@ Open http://localhost:5000 in your browser
     
 ## 🌐 Deployment
 
+The application is deployed and currently live at ( https://www.michaelokinyi.tech )
 
 ### Server Architecture
 
@@ -281,7 +282,7 @@ configure haproxy (/etc/haproxy/haproxy.cfg)
 
 3.**Monitor traffic distribution:**  # Note the server alternations
 
-      curl -sI https://michelokinyi.tech 
+      curl -sI https://www.michaelokinyi.tech 
       
 
 # 🔧 API Documentation
